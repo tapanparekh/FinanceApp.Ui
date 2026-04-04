@@ -1,6 +1,6 @@
 export const Login = ()=>{
     return(
-        <div>
+        <div className="login_container">
             <h1>Login</h1>
         </div>
     )
