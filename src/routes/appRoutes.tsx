@@ -5,11 +5,13 @@ import { Dashboard } from '../components/dashboard/dashboard';
 
 export const AppRoutes = () => {
     return (
-        <Routes>
-            <Route path="/" element={<Login />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/dashboard" element={<Dashboard />}></Route>
-            <Route path="/register" element={<Register />}></Route> 
-        </Routes>
+        <div className="container">
+            <Routes>
+                <Route path="/" element={<Login />}></Route>
+                <Route path="/login" element={<Login />}></Route>
+                <Route path="/dashboard" element={<Dashboard />}></Route>
+                <Route path="/register" element={<Register />}></Route>
+            </Routes>
+        </div>
     );
 }
