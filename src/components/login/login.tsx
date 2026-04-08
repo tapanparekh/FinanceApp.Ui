@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login } from '../../services/auth';
+import { login, setUserToken } from '../../services/auth';
 import './login.css'
 
 export const Login = () => {
@@ -19,9 +19,7 @@ export const Login = () => {
             const response = await login(email, password);
             console.log(response);
             const data = response.data;
-            console.log('Login successful:', data);
-            // Store token or redirect user here
-            // localStorage.setItem('token', data.token);
+            setUserToken(data.token);
             navigate('/dashboard');
 
         } catch (err) {
