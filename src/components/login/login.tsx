@@ -21,7 +21,6 @@ export const Login = () => {
             const data = response.data;
             setUserToken(data.token);
             navigate('/dashboard');
-
         } catch (err) {
             setError(err instanceof Error ? err.message : 'An error occurred');
         } finally {
